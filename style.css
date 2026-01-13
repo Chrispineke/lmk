@@ -1,0 +1,121 @@
+:root {
+    --primary: #4f46e5;
+    --secondary: #f97316;
+    --accent: #22c55e;
+    --dark: #111827;
+    --light: #f3f4f6;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: var(--light);
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--accent),
+        var(--secondary)
+    );
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: var(--dark);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FEATURE STRIP */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 60px;
+    background: var(--white);
+}
+
+.feature {
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.feature.blue { background: var(--primary); }
+.feature.green { background: var(--accent); }
+.feature.orange { background: var(--secondary); }
+.feature.dark { background: var(--dark); }
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* REUSABLE */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}

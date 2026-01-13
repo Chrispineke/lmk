@@ -1,0 +1,20 @@
+<script src="db.js"></script>
+<script src="auth.js"></script>
+<script src="guard.js"></script>
+
+<h2>User Dashboard</h2>
+<div id="info"></div>
+
+<div class="grid">
+    <a class="card" href="blog.html">Blog</a>
+    <a class="card" href="marketplace.html">Marketplace</a>
+    <a class="card" href="chat.html">Chat</a>
+    <a class="card" href="analytics.html">Analytics</a>
+</div>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+document.getElementById("info").innerText =
+    "Welcome " + currentUser().name;
+</script>

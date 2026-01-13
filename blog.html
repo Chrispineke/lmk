@@ -1,0 +1,26 @@
+<script src="db.js"></script>
+
+<h2>Blog</h2>
+
+<input id="postTitle" placeholder="Title">
+<textarea id="postBody"></textarea>
+<button onclick="addPost()">Publish</button>
+
+<div id="posts"></div>
+
+<script>
+function addPost() {
+    DB.posts.push({
+        title: postTitle.value,
+        body: postBody.value
+    });
+    render();
+}
+
+function render() {
+    posts.innerHTML = DB.posts.map(
+        p => `<div class="card"><h3>${p.title}</h3><p>${p.body}</p></div>`
+    ).join("");
+}
+render();
+</script>
